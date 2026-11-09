@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-09
+
 ### Added
 - `greet()` now accepts a `punctuation` argument (default `"!"`); `greet("Hee", ".")` returns `Hello, Hee.` instead of always ending with `!`.
 
