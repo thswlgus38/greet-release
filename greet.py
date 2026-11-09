@@ -1,9 +1,11 @@
 """Greeting program for the Week10 release exercise."""
 
 
-def greet(name: str) -> str:
+def greet(name: str, punctuation: str = "!") -> str:
     """Return a greeting message for name."""
-    return f"Hello, {name}!"
+    if not name or not name.strip():
+        name = "world"
+    return f"Hello, {name}{punctuation}"
 
 
 def main() -> int:
@@ -17,6 +19,14 @@ def main() -> int:
 
 def test_greet() -> None:
     assert greet("Hee") == "Hello, Hee!"
+
+
+def test_greet_blank() -> None:
+    assert greet(" ") == "Hello, world!"
+
+
+def test_greet_punctuation() -> None:
+    assert greet("Hee", ".") == "Hello, Hee."
 
 
 if __name__ == "__main__":
